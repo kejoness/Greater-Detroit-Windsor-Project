@@ -1,3 +1,29 @@
+header {
+    display: flex; 
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; 
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    align-items: center; 
+    border-bottom-width: 1px;
+}
+
+.nav-container {
+    display: flex; 
+    align-items: center;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #F2FF00;
+}
+
+nav ul {
+    display: flex; 
+    gap: 2.5rem; 
+    align-content: space-evenly; 
+}
+
 .slider {
     position: relative;
     max-width: 500px;
