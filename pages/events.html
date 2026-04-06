@@ -52,22 +52,21 @@
         </div>
     </section>
     <div class="slider flex mx-auto items-center">
-            <div class="slides" id="slides">
-                <img src="/images/gdwp-conference-audience-photo.jpeg" alt="Slide 1">
-                <img src="/images/gdwp-conference2025-2.jpeg" alt="Slide 2">
-                <img src="/images/gdwp-conference2025-3.jpeg" alt="Slide 3">
-                <img src="/images/gdwp-conference2025-4.jpeg" alt="Slide 4">
-                <img src="/images/gdwp-conference2025-1.jpeg" alt="Slide 5">
-                <img src="/images/gdwp-conference2025-7.jpeg" alt="Slide 6">
+            <div class="slides" id="slides1">
+                <img src="/images/gdwp-conference2025-2.jpeg" alt="Slide 1">
+                <img src="/images/gdwp-conference2025-3.jpeg" alt="Slide 2">
+                <img src="/images/gdwp-conference2025-4.jpeg" alt="Slide 3">
+                <img src="/images/gdwp-conference2025-1.jpeg" alt="Slide 4">
+                <img src="/images/gdwp-conference2025-7.jpeg" alt="Slide 5">
             </div>
             <div class="buttons">
-                <button onclick="prevSlide()"><</button>
-                <button onclick="nextSlide()">></button>
+                <button onclick="prevSlide1()"><</button>
+                <button onclick="nextSlide1()">></button>
             </div>
     </div>
     <h2 class="text-2xl text-center font-medium pt-3">GDWP Launch - October 2024</h2>
     <div class="slider flex mx-auto items-center">
-            <div class="slides" id="slides">
+            <div class="slides" id="slides2">
                 <img src="/images/IMG_0569.jpeg" alt="Slide 1">
                 <img src="/images/IMG_0564.jpeg" alt="Slide 2">
                 <img src="/images/IMG_0566.jpeg" alt="Slide 3">
@@ -75,26 +74,42 @@
                 <img src="/images/IMG_0574.jpeg" alt="Slide 5">
             </div>
             <div class="buttons">
-                <button onclick="prevSlide()"><</button>
-                <button onclick="nextSlide()">></button>
+                <button onclick="prevSlide2()"><</button>
+                <button onclick="nextSlide2()">></button>
             </div>
     </div>
     <script>
-        const slides = document.getElementById("slides");
-        const totalSlides = slides.children.length;
-        let index = 0;
+        const slides1 = document.getElementById("slides1");
+        const slides2 = document.getElementById("slides2");
+        const totalOfSlides1 = slides1.children.length;
+        const totalOfSlides2 = slides2.children.length;
+        let indexOfSlides1 = 0;
+        let indexOfSlides2 = 0;
 
-        function showSlides(i){
-            index = (i + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${index*100}%)`;
+        function showSlides1(i){
+            indexOfSlides1 = (i + totalOfSlides1) % totalOfSlides1;
+            slides1.style.transform = `translateX(-${indexOfSlides1*100}%)`;
         }
 
-        function nextSlide(){
-            showSlides(index+1);
+        function showSlides2(i){
+            indexOfSlides2 = (i + totalOfSlides2) % totalOfSlides2;
+            slides2.style.transform = `translateX(-${indexOfSlides2*100}%)`;
         }
 
-        function prevSlide(){
-            showSlides(index-1);
+        function nextSlide1(){
+            showSlides1(indexOfSlides1+1);
+        }
+
+        function nextSlide2(){
+            showSlides2(indexOfSlides2+1);
+        }
+
+        function prevSlide1(){
+            showSlides1(indexOfSlides1-1);
+        }
+
+        function prevSlide2(){
+            showSlides2(indexOfSlides2-1);
         }
     </script>
     <footer class="bg-black text-white ">
