@@ -70,11 +70,12 @@ nav ul {
 }
 
 .advisory-board-cards {
-    width: 85%;
+    /* width: 85%; */
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
     margin: 20px auto;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .advisory-board-card {
@@ -105,7 +106,7 @@ nav ul {
 @media screen and (max-width: 768px) {
     .advisory-board-cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
     }
 
